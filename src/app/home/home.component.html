@@ -1,0 +1,68 @@
+
+<div *ngIf = "showContent">
+  Hello World
+</div>
+
+<!-- <ng-template [ngIf]="showContent">
+  Hello World
+</ng-template> -->
+
+
+
+<div>
+  <ul class="list-unstyled">
+    <!-- <li *ngFor="let employee of employees;let i = index">
+      {{i+1}}  {{ employee.name }}
+    </li> -->
+    <li>
+      {{ currentDate | percent}}
+    </li>
+  </ul>
+</div>
+
+<!-- <ng-template ngFor let-employee [ngForOf]="employees">
+    {{employees.name}}
+</ng-template> -->
+
+<div [ngClass]="callNgClass()"  >
+  ng class demo
+</div>
+
+<div [ngStyle] = "{ 'height.px' : 400 , 'width.px' : 400 ,'background' : 'red' }">
+  Hello
+</div>
+
+<img [src]="selectedLogo" style="background: black">
+
+<button (click)="changeLogos()" [disabled]="showContent">{{ showContent ? "Disabled" : "notDisabled"  }}</button>
+<button (click)="hideContent()">Click</button>
+
+<div class="form-group">
+  <input  class="form-control"  [(ngModel)] = "email" placeholder="Email" type="email">
+{{email}}
+</div>
+
+<!-- Directives -->
+
+<!-- 
+    *ngIf
+    *ngFor
+    *ngClass
+    *ngStyle
+ -->
+
+ <!-- Bindings -->
+
+ <!-- 
+   one Way binding (  () , []   )
+   Two way bind ( [()]  ) 
+  -->
+
+
+
+  <!-- 
+    Event Binding
+    Attribute Binding
+
+    Input Binding
+   -->
